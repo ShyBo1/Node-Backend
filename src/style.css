@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-color:  whitesmoke;
+  align-content: center;
+}
+.inside{
+  height: 70vh;
+  background-color: white;
+  width: 30%;
+  border-radius: 20px;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  gap: 30px;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+}
+.one{
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+.two{
+  align-self: center;
+  justify-self: center; 
+  text-align: center;
+}
+.three{
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+.four{
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+.five{
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+.input-field{
+  height: 50px;
+  width: 370px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+  &:focus {
+    background-color: lightblue;
+    border-color:  rgb(13, 149, 194);
+    box-shadow: 0 0 5px  rgb(13, 149, 194);
+    outline: none;
+  }
+  &:hover {
+    border-color:  rgb(13, 149, 194);
+    background-color: lightblue;
+  }
+}
+button {
+  height: 50px;
+  width: 300px;
+  font-size: 20px;
+  color: white;
+  background-color:  rgb(17, 150, 194);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: lightblue;
+  transition: background-color 0.3s ease;
+}
+button:active{
+  scale: 0.95;
+}
