@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 
 function Signup() {
     let {formdata, setFormdata} = useState({
@@ -14,10 +15,10 @@ function Signup() {
             ...formdata, [name]: value});
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
         try {
-            const response = await.fetch ('https://example.com/api/signup', {
+            const response = await fetch ('https://example.com/api/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -29,7 +30,7 @@ function Signup() {
                 throw new Error('Network response was not ok');
             }
 
-            const data = await.response.json();
+            const data = await response.json();
             console.log('Success:', data);
         } catch (error) {
             console.error('Error:', error);
@@ -63,29 +64,6 @@ function Signup() {
             </form>
         </div>
     );
-  return (
-    <div className="inside" style={{color:'black'}}>
-        <div className="one">
-            <input type="text" className='input-field'
-             placeholder='Firstname'/>
-        </div>
-        <div className="two">
-            <input type="text" className='input-field'
-             placeholder='Lastname'/>
-        </div>
-        <div className="three">
-            <input type="email" className='input-field'
-             placeholder='Email'/>
-        </div>
-        <div className="four">
-            <input type="password" className='input-field'
-             placeholder='Password'/>
-        </div>
-         <div className="five">
-            <button>Sign up</button>
-         </div>
-    </div>
-  )
 }
 
-export default Signup
+export default Signup;
